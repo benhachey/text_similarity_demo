@@ -27,6 +27,12 @@ Activate the `ts38` virtual environment:
 
 ```conda activate ts38```
 
+Install packages:
+
+```conda install scikit-learn```
+
+This will install a number of scientific computing packages as well as `sklearn`, which includes modules for working with text.
+
 
 ### Install VS Code
 
@@ -48,6 +54,7 @@ If another dialog appears asking whether to restart VS Code to activate Python, 
 
 Open VS Code if it isn't already then use the instructions below to run the demonstration.
 
+
 ### Select Python interpreter
 
 Press `command+shift+P` to open the command pallette. Type `Python: Select Interpreter` and press enter. Use the dialog to choose the `ts38` conda environment.
@@ -57,20 +64,37 @@ Check that the correct Python intepreter is being used. It should be displayed i
 
 ### Download the demo
 
-TODO
+Use the following link to download the demo to your project folder or working directory:
+
+https://raw.githubusercontent.com/benhachey/text_similarity_demo/main/text_similarity_demo.ipynb
 
 
 ### Open the demo notebook
 
-TODO
+Switch back to your VS Code window. Use the "Open" dialog under the "File" menu to open the IPYNB file you exported in the previous step.
+
+
+### Export the data
+
+Open the spreadsheet in Excel. Activate the worksheet that contains the text data. Use the "Save As" dialog under the "File" menu in Excel to export the worksheet as a comma-separated values (CSV) file. Move this file to your folder or working directory.
 
 
 ### Define input/output
 
-TODO
+Update the following variables to set the path to the input CSV and the columns to be processed:
 
+```
+CSV_PATH = pathlib.Path("list_of_provisions.csv")
+ID_COLUMN_NAME = "\ufeffSECTION no"
+TEXT_COLUMN_NAME = "TEXT"
+```
+
+Update the following variable to set the path to the output CSV:
+
+```
+OUT_PATH = pathlib.Path("similarities.csv")
+```
 
 ### Run notebook cells
 
-TODO
-
+Press the play button on each cell in the notebook to run individually. Or press the run all cells button at the top of the VS Code window.
